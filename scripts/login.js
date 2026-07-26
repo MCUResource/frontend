@@ -14,7 +14,7 @@ async function login(username,password){
     //send the login post request to the backend
     const response = await fetch("https://backend-meq1.onrender.com/api/auth/",{
         method: "POST",
-        headers{
+        headers:{
             "Content-Type" : "application/json"
         },
         body: JSON.stringify(login_cred)
