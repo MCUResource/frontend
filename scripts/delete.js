@@ -16,13 +16,15 @@ async function getAllSongs(){
 }
 
 async function deleteSong(){
-    //get the song id
+    //get the song ID of the selected song
     const songID = document.querySelector("#songDropDown option:checked").value
     const response = await fetch("https://backend-meq1.onrender.com/api/songs/" + songID,{
         method: "DELETE"
     })
-    if(response.ok){
+    if (response.ok) {
         getAllSongs()
+        // Successfully deleted song
+        alert("Song Deleted")
     }
     else{
         document.querySelector("#error").innerHTML = "Cannot delete song"
