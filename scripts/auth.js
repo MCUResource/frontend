@@ -2,7 +2,7 @@ class Auth{
     constructor(){
         document.querySelector("body").style.display = "none"
         const auth = localStorage.getItem("auth")
-        this.validate(auth)
+        this.validateAuth(auth)
     }
 
     validateAuth(auth){
